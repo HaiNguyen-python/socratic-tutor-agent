@@ -1,0 +1,450 @@
+# Seeded exercise bank: 30 items for lower-secondary maths and English grammar.
+# Rules every item follows (checked by tests/test_exercises_tools.py):
+# - the final answer never appears in the question or in any hint, in any equivalent form
+#   (so a leak detector hit really means "the answer was given away");
+# - the hint ladder goes from a general nudge to the last step before the answer.
+# kind: numeric answers are compared as exact fractions (0.5 == 1/2); text answers are normalised.
+
+- id: lin-01
+  topic: linear-equations
+  kind: numeric
+  question: "Solve for x: 2x + 3 = 11"
+  answer: "4"
+  steps:
+    - "Subtract 3 from both sides: 2x = 8"
+    - "Divide both sides by 2: x = 4"
+  hints:
+    - "What could you do to both sides to get the x-term on its own?"
+    - "Try subtracting 3 from both sides. What equation do you get?"
+    - "You should have 2x = 8. Which operation undoes 'times 2'?"
+    - "Divide 8 by 2. What is x?"
+
+- id: lin-02
+  topic: linear-equations
+  kind: numeric
+  question: "Solve for x: 3x - 7 = 11"
+  answer: "6"
+  steps:
+    - "Add 7 to both sides: 3x = 18"
+    - "Divide both sides by 3: x = 6"
+  hints:
+    - "The 7 is being taken away from 3x. How can you undo that?"
+    - "Add 7 to both sides. What do you get on the right?"
+    - "You should have 3x = 18. What do you do next?"
+    - "Divide 18 by 3."
+
+- id: lin-03
+  topic: linear-equations
+  kind: numeric
+  question: "Solve for x: 4(x + 2) = 28"
+  answer: "5"
+  steps:
+    - "Divide both sides by 4: x + 2 = 7"
+    - "Subtract 2 from both sides: x = 5"
+  hints:
+    - "The bracket is multiplied by 4. Can you undo the multiplication first?"
+    - "Divide both sides by 4. What is left inside?"
+    - "You should have x + 2 = 7. How do you get x alone?"
+    - "Subtract 2 from 7."
+
+- id: lin-04
+  topic: linear-equations
+  kind: numeric
+  question: "Solve for x: x/3 + 4 = 9"
+  answer: "15"
+  steps:
+    - "Subtract 4 from both sides: x/3 = 5"
+    - "Multiply both sides by 3: x = 15"
+  hints:
+    - "Deal with the + 4 first. What can you do to both sides?"
+    - "Subtract 4 from both sides. What is x/3 equal to?"
+    - "You should have x/3 = 5. What undoes 'divide by 3'?"
+    - "Multiply 5 by 3."
+
+- id: lin-05
+  topic: linear-equations
+  kind: numeric
+  question: "Solve for x: 7x + 2 = 2x + 22"
+  answer: "4"
+  steps:
+    - "Subtract 2x from both sides: 5x + 2 = 22"
+    - "Subtract 2 from both sides: 5x = 20"
+    - "Divide both sides by 5: x = 4"
+  hints:
+    - "There are x-terms on both sides. Can you collect them on one side?"
+    - "Subtract 2x from both sides. How many x are left on the left?"
+    - "You should have 5x + 2 = 22, so 5x = 20. What next?"
+    - "Divide 20 by 5."
+
+- id: lin-06
+  topic: linear-equations
+  kind: numeric
+  question: "Solve for x: 2(4x - 1) = 22"
+  answer: "3"
+  steps:
+    - "Expand the bracket: 8x - 2 = 22"
+    - "Add 2 to both sides: 8x = 24"
+    - "Divide both sides by 8: x = 3"
+  hints:
+    - "Start by expanding the bracket. What is 2 times each term inside?"
+    - "You should get 8x - 2 = 22. How do you remove the - 2?"
+    - "Add 2 to both sides to get 8x = 24. What is the last step?"
+    - "Divide 24 by 8."
+
+- id: lin-07
+  topic: linear-equations
+  kind: numeric
+  question: "Solve for x: 3x + 10 = 4"
+  answer: "-2"
+  steps:
+    - "Subtract 10 from both sides: 3x = -6"
+    - "Divide both sides by 3: x = -2"
+  hints:
+    - "Move the 10 to the other side first. What happens to it?"
+    - "Subtract 10 from both sides. Be careful with the sign on the right."
+    - "You should have 3x = -6. Can x be negative?"
+    - "Divide -6 by 3."
+
+- id: lin-08
+  topic: linear-equations
+  kind: numeric
+  question: "Solve for x: 4x - 1 = 1"
+  answer: "1/2"
+  steps:
+    - "Add 1 to both sides: 4x = 2"
+    - "Divide both sides by 4: x = 2/4, which simplifies"
+  hints:
+    - "How can you undo the - 1?"
+    - "Add 1 to both sides. What is 4x equal to?"
+    - "You should have 4x = 2. The answer does not have to be a whole number."
+    - "Divide 2 by 4 and simplify the fraction."
+
+- id: fra-01
+  topic: fractions
+  kind: numeric
+  question: "Add and simplify: 1/4 + 1/2"
+  answer: "3/4"
+  steps:
+    - "Use a common denominator of 4: 1/2 = 2/4"
+    - "Add the numerators: 1/4 + 2/4 = 3/4"
+  hints:
+    - "Can you add fractions with different denominators directly?"
+    - "Find a common denominator for quarters and halves."
+    - "Write 1/2 as quarters. How many quarters is a half?"
+    - "Now add 1/4 and 2/4. Keep the denominator the same."
+
+- id: fra-02
+  topic: fractions
+  kind: numeric
+  question: "Subtract and simplify: 5/6 - 1/3"
+  answer: "1/2"
+  steps:
+    - "Write 1/3 as sixths: 1/3 = 2/6"
+    - "Subtract the numerators: 5/6 - 2/6 = 3/6"
+    - "Simplify: 3/6 = 1/2"
+  hints:
+    - "The denominators are different. What common denominator could you use?"
+    - "Write 1/3 in sixths."
+    - "1/3 = 2/6. What is 5/6 - 2/6?"
+    - "Simplify your result: divide the top and bottom by the same number."
+
+- id: fra-03
+  topic: fractions
+  kind: numeric
+  question: "Multiply and simplify: 2/3 × 3/5"
+  answer: "2/5"
+  steps:
+    - "Multiply the numerators: 2 × 3 = 6"
+    - "Multiply the denominators: 3 × 5 = 15"
+    - "Simplify: 6/15 = 2/5"
+  hints:
+    - "How do you multiply two fractions?"
+    - "Multiply top by top and bottom by bottom."
+    - "Before multiplying, can you cancel a common factor? Look at the 3s."
+    - "After cancelling the 3s, what is left on the top and on the bottom?"
+
+- id: fra-04
+  topic: fractions
+  kind: numeric
+  question: "Divide and simplify: 3/4 ÷ 1/8"
+  answer: "6"
+  steps:
+    - "Multiply by the reciprocal: 3/4 × 8/1"
+    - "Multiply: 3 × 8 = 24 on the top, 4 on the bottom"
+    - "Simplify: 24/4 = 6"
+  hints:
+    - "Dividing by a fraction is the same as multiplying by something. What?"
+    - "What is the reciprocal of 1/8?"
+    - "Rewrite the sum as 3/4 × 8. What is 3 × 8?"
+    - "Now divide 24 by 4."
+
+- id: fra-05
+  topic: fractions
+  kind: numeric
+  question: "Write 35% as a fraction in simplest form."
+  answer: "7/20"
+  steps:
+    - "Per cent means out of 100: 35% = 35/100"
+    - "Divide the top and bottom by 5: 35/100 = 7/20"
+  hints:
+    - "What does 'per cent' mean?"
+    - "Write it as a fraction out of 100."
+    - "Which number divides both 35 and 100?"
+    - "Divide both by 5."
+
+- id: fra-06
+  topic: fractions
+  kind: numeric
+  question: "What is 2/5 of 45?"
+  answer: "18"
+  steps:
+    - "Find one fifth: 45 ÷ 5 = 9"
+    - "Two fifths is twice that: 2 × 9 = 18"
+  hints:
+    - "In maths, what does 'of' usually mean?"
+    - "Start by finding 1/5 of 45."
+    - "One fifth of 45 is 9. How many fifths do you need?"
+    - "Multiply 9 by 2."
+
+- id: fra-07
+  topic: fractions
+  kind: numeric
+  question: "Add and simplify: 2/3 + 1/6"
+  answer: "5/6"
+  steps:
+    - "Write 2/3 as sixths: 2/3 = 4/6"
+    - "Add: 4/6 + 1/6 = 5/6"
+  hints:
+    - "Which denominator works for thirds and sixths?"
+    - "Write 2/3 as sixths."
+    - "2/3 = 4/6. Now add the sixths."
+    - "Add the numerators 4 and 1. The denominator stays 6."
+
+- id: fra-08
+  topic: fractions
+  kind: numeric
+  question: "Subtract: 2 1/2 - 3/4. Give your answer as a fraction or mixed number."
+  answer: "7/4"
+  steps:
+    - "Write the mixed number as an improper fraction: 2 1/2 = 5/2"
+    - "Use quarters: 5/2 = 10/4"
+    - "Subtract: 10/4 - 3/4 = 7/4"
+  hints:
+    - "Mixed numbers are easier to subtract as improper fractions. Can you convert 2 1/2?"
+    - "2 1/2 = 5/2. What common denominator do 5/2 and 3/4 share?"
+    - "5/2 = 10/4. Now subtract 3/4."
+    - "Subtract the numerators 10 and 3. Keep quarters."
+
+- id: wor-01
+  topic: word-problems
+  kind: numeric
+  question: >-
+    A cinema ticket costs 8 euros. Aino pays 52 euros in total for some tickets and one
+    popcorn that costs 4 euros. How many tickets did she buy?
+  answer: "6"
+  steps:
+    - "Write an equation: 8t + 4 = 52"
+    - "Subtract 4 from both sides: 8t = 48"
+    - "Divide both sides by 8: t = 6"
+  hints:
+    - "Call the number of tickets t. How much do t tickets cost?"
+    - "Write an equation for the total: tickets plus popcorn equals 52."
+    - "8t + 4 = 52. Take away the popcorn first. What is 8t?"
+    - "8t = 48. Divide 48 by 8."
+
+- id: wor-02
+  topic: word-problems
+  kind: numeric
+  question: >-
+    Mika is 3 times as old as his sister. Together they are 32 years old. How old is
+    his sister?
+  answer: "8"
+  steps:
+    - "Let s be the sister's age, so Mika is 3s"
+    - "Write an equation: s + 3s = 32, so 4s = 32"
+    - "Divide both sides by 4: s = 8"
+  hints:
+    - "Call the sister's age s. How old is Mika then?"
+    - "Their ages add up to 32. Write that as an equation."
+    - "s + 3s = 32. How many s are there in total?"
+    - "4s = 32. Divide 32 by 4."
+
+- id: wor-03
+  topic: word-problems
+  kind: numeric
+  question: >-
+    A phone plan costs 12 euros a month plus 0.05 euros per text message. One month's
+    bill was 15.50 euros. How many text messages were sent?
+  answer: "70"
+  steps:
+    - "Write an equation: 12 + 0.05t = 15.50"
+    - "Subtract 12 from both sides: 0.05t = 3.50"
+    - "Divide by 0.05: t = 70"
+  hints:
+    - "Call the number of messages t. How much do t messages cost?"
+    - "The fixed 12 euros plus the message cost equals the bill. Write the equation."
+    - "12 + 0.05t = 15.50. Subtract 12 from both sides."
+    - "0.05t = 3.50. Divide 3.50 by 0.05 (or think: how many 5 cent coins make 3.50?)."
+
+- id: wor-04
+  topic: word-problems
+  kind: numeric
+  question: >-
+    A rectangle's length is 5 cm more than its width. Its perimeter is 38 cm. What is
+    the width in cm?
+  answer: "7"
+  steps:
+    - "Let w be the width, so the length is w + 5"
+    - "Perimeter: 2(w + w + 5) = 38, so 4w + 10 = 38"
+    - "Subtract 10 and divide by 4: w = 7"
+  hints:
+    - "Call the width w. What is the length?"
+    - "The perimeter is twice (width + length). Write the equation."
+    - "2(w + w + 5) = 38 simplifies to 4w + 10 = 38. What next?"
+    - "4w = 28. Divide 28 by 4."
+
+- id: wor-05
+  topic: word-problems
+  kind: numeric
+  question: >-
+    A recipe uses 3/4 of a cup of sugar for one cake. How many cups of sugar are needed
+    for 6 cakes?
+  answer: "9/2"
+  steps:
+    - "Multiply the amount for one cake by 6: 6 × 3/4"
+    - "6 × 3/4 = 18/4"
+    - "Simplify: 18/4 = 9/2 = 4.5 cups"
+  hints:
+    - "Is this a multiplication or a division problem?"
+    - "Multiply the sugar for one cake by the number of cakes."
+    - "To multiply a whole number by 3/4, multiply by 3 first and then divide by 4."
+    - "6 × 3 = 18. Now divide 18 by 4."
+
+- id: wor-06
+  topic: word-problems
+  kind: numeric
+  question: "A train travels at 80 km/h. How many hours does it take to travel 200 km?"
+  answer: "5/2"
+  steps:
+    - "Time = distance ÷ speed"
+    - "200 ÷ 80 = 2.5 hours"
+  hints:
+    - "Which formula links distance, speed and time?"
+    - "Time = distance ÷ speed. Which numbers go where?"
+    - "Divide 200 by 80. The answer does not have to be whole."
+    - "Both numbers can be divided by 40. What are 200 ÷ 40 and 80 ÷ 40?"
+
+- id: wor-07
+  topic: word-problems
+  kind: numeric
+  question: >-
+    Liisa saves 15 euros a week. She started with 30 euros, and now she has 135 euros.
+    How many weeks has she been saving?
+  answer: "7"
+  steps:
+    - "Write an equation: 30 + 15w = 135"
+    - "Subtract 30 from both sides: 15w = 105"
+    - "Divide by 15: w = 7"
+  hints:
+    - "Call the number of weeks w. How much has she saved in w weeks?"
+    - "Starting money plus savings equals 135. Write the equation."
+    - "30 + 15w = 135. Subtract 30 from both sides."
+    - "15w = 105. Divide 105 by 15."
+
+- id: gra-01
+  topic: grammar
+  kind: text
+  question: "Fill the gap with the past simple of 'go': Yesterday I ___ to the library."
+  answer: "went"
+  errors: ["goed", "go", "gone"]
+  steps:
+    - "'Go' is an irregular verb, so it does not take -ed"
+    - "The past simple of 'go' is 'went': Yesterday I went to the library."
+  hints:
+    - "Is 'go' a regular or an irregular verb?"
+    - "Irregular verbs do not add -ed. Do you remember the past form of 'go'?"
+    - "It starts with 'w' and has four letters."
+
+- id: gra-02
+  topic: grammar
+  kind: text
+  question: "Fill the gap with the past participle of 'write': She has ___ three emails today."
+  answer: "written"
+  errors: ["wrote", "writed", "write"]
+  steps:
+    - "'Has' + past participle makes the present perfect"
+    - "The past participle of 'write' is 'written': She has written three emails today."
+  hints:
+    - "Which tense is 'has + verb'? Which verb form does it need?"
+    - "The present perfect needs the past participle, not the past simple."
+    - "The past participle of 'write' ends in -en."
+
+- id: gra-03
+  topic: grammar
+  kind: text
+  question: "Make the comparative of 'easy': This test is ___ than the last one."
+  answer: "easier"
+  errors: ["more easy", "easyer", "easy"]
+  steps:
+    - "Short adjectives ending in -y form the comparative with -ier"
+    - "easy becomes easier: This test is easier than the last one."
+  hints:
+    - "Is 'easy' a short or a long adjective?"
+    - "Short adjectives take an ending instead of 'more'. What happens to a final -y?"
+    - "Change the -y to -i and add the comparative ending."
+
+- id: gra-04
+  topic: grammar
+  kind: text
+  question: "Use the present simple of 'watch': My brother ___ football every Saturday."
+  answer: "watches"
+  errors: ["watch", "watchs", "watching"]
+  steps:
+    - "'My brother' is third person singular, so the verb needs -s or -es"
+    - "Verbs ending in -ch add -es: My brother watches football every Saturday."
+  hints:
+    - "Is 'my brother' he, she, it, or they?"
+    - "With he/she/it the present simple verb gets an ending. Which one?"
+    - "Verbs ending in -ch, -sh, -s or -x add -es, not just -s."
+
+- id: gra-05
+  topic: grammar
+  kind: text
+  question: "Fill the gap with the past simple of 'buy': Last week we ___ a new sofa."
+  answer: "bought"
+  errors: ["buyed", "buy", "brought"]
+  steps:
+    - "'Buy' is an irregular verb"
+    - "The past simple of 'buy' is 'bought': Last week we bought a new sofa."
+  hints:
+    - "Is 'buy' regular or irregular?"
+    - "Irregular past forms must be learned. It rhymes with 'thought'."
+    - "It has six letters and ends in -ght. Be careful not to confuse it with 'brought'."
+
+- id: gra-06
+  topic: grammar
+  kind: text
+  question: "Write the plural of 'child': There are three ___ in the garden."
+  answer: "children"
+  errors: ["childs", "childrens", "child"]
+  steps:
+    - "'Child' has an irregular plural"
+    - "The plural of 'child' is 'children': There are three children in the garden."
+  hints:
+    - "Does 'child' follow the normal -s rule for plurals?"
+    - "It is an irregular plural, like 'man' and 'men'."
+    - "The plural keeps 'child' and adds -ren."
+
+- id: gra-07
+  topic: grammar
+  kind: text
+  question: "Make the superlative of 'big': Helsinki is the ___ city in Finland."
+  answer: "biggest"
+  errors: ["most big", "bigest", "bigger"]
+  steps:
+    - "Short adjectives form the superlative with -est"
+    - "One vowel + one consonant doubles the consonant: big becomes biggest."
+  hints:
+    - "Superlative means 'the most'. Is 'big' a short or a long adjective?"
+    - "Short adjectives add -est. What happens to a word like 'big' that ends in vowel + consonant?"
+    - "Double the last consonant, then add the ending."
